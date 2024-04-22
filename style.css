@@ -788,6 +788,10 @@ body {
     display: block;
 }
 
+.show-info {
+    display: block;
+}
+
 
 .hidden {
     display: none;
