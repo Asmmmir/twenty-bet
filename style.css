@@ -81,10 +81,13 @@ body {
 
 .header__subtitle {
     font-size: 20px;
-    line-height: 140%;
+    font-weight: 600;
+
 }
 
-
+.underline {
+    text-decoration: underline;
+}
 
 /* MAIN */
 
