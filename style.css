@@ -193,6 +193,7 @@ body {
     padding: 16px;
     box-shadow: -4px 10px 20px 0 rgba(0, 0, 0, 0.05);
     background: #fff;
+    z-index: 2;
 }
 
 .info__description p {
@@ -495,7 +496,11 @@ body {
 }
 
 
+/* PAYMENT METHODS */
+
+
 .content__payment {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -518,7 +523,8 @@ body {
     align-items: center;
 }
 
-.content__payment-more {
+
+.content__payment-btn {
     border: none;
     background-color: inherit;
     font-weight: 600;
@@ -527,11 +533,54 @@ body {
     cursor: pointer;
 }
 
+.content__payment-item button {
+    width: 100%;
+    height: 100%;
+
+}
 
 .content__item-wrapper:hover .content__payment-item {
     background-color: #fff;
 }
 
+.content__item-wrapper:hover .content__payment-btn:active {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.content__item-wrapper:hover .content__payment-btn button:active {
+    color: #fff;
+}
+
+
+
+.content__payment-extra {
+    position: absolute;
+    top: 130px;
+    left: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-width: 280px;
+    background-color: #fff;
+    box-shadow: -4px 10px 20px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 16px;
+    z-index: 10;
+}
+
+.content__payment-extra-item {
+    width: 80px;
+    height: 40px;
+    background-color: #F6F5F4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CRYPTO PAYMENT  */
 
 .content__crypto-payment {
     display: flex;
@@ -735,7 +784,7 @@ body {
     row-gap: 8px;
 }
 
-.show-info {
+.show-term {
     display: block;
 }
 

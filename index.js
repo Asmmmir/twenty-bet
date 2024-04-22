@@ -152,11 +152,26 @@ moreBtns.forEach((btn) => {
     btn.classList.toggle('more-show');
     icon.classList.toggle('rotate');
     if (terms) {
-      terms.classList.toggle('show-info');
+      terms.classList.toggle('show-term');
     }
   });
 });
 
+
+
+
+// SHOW MORE PAYMENT METHODS
+
+
+const paymentBtns = document.querySelectorAll('.content__payment-btn');
+
+paymentBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.content__item-wrapper');
+        const extraPayments = card.querySelector('.content__payment-extra');
+        extraPayments.classList.toggle('hidden');
+    });
+});
 
 
 
